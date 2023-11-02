@@ -1,2 +1,1 @@
-# next_learn
-next_learn
+https://nextjs.org/learn/dashboard-app/css-styling
