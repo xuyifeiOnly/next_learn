@@ -1,6 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@headlessui/react': ^1.7.17
   '@heroicons/react': ^2.0.18
   '@tailwindcss/forms': ^0.5.6
   '@types/bcrypt': ^5.0.1
@@ -27,6 +28,7 @@ specifiers:
   zod: ^3.22.2
 
 dependencies:
+  '@headlessui/react': registry.npmjs.org/@headlessui/react/1.7.17_biqbaboplfbrettd7655fr4n2y
   '@heroicons/react': registry.npmjs.org/@heroicons/react/2.0.18_react@18.2.0
   '@tailwindcss/forms': registry.npmjs.org/@tailwindcss/forms/0.5.6_tailwindcss@3.3.3
   '@types/node': registry.npmjs.org/@types/node/20.5.7
@@ -142,6 +144,21 @@ packages:
     version: 8.52.0
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     dev: true
+
+  registry.npmjs.org/@headlessui/react/1.7.17_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-4am+tzvkqDSSgiwrsEpGWqgGo9dz8qU5M3znCkC4PgkpY4HcCZzEDEvozltGGGHIKl9jbXbZPSH5TWn4sWJdow==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/@headlessui/react/-/react-1.7.17.tgz}
+    id: registry.npmjs.org/@headlessui/react/1.7.17
+    name: '@headlessui/react'
+    version: 1.7.17
+    engines: {node: '>=10'}
+    peerDependencies:
+      react: ^16 || ^17 || ^18
+      react-dom: ^16 || ^17 || ^18
+    dependencies:
+      client-only: registry.npmjs.org/client-only/0.0.1
+      react: registry.npmjs.org/react/18.2.0
+      react-dom: registry.npmjs.org/react-dom/18.2.0_react@18.2.0
+    dev: false
 
   registry.npmjs.org/@heroicons/react/2.0.18_react@18.2.0:
     resolution: {integrity: sha512-7TyMjRrZZMBPa+/5Y8lN0iyvUU/01PeMGX2+RE7cQWpEUIcb4QotzUObFkJDejj/HUH4qjP/eQ0gzzKs2f+6Yw==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/@heroicons/react/-/react-2.0.18.tgz}
