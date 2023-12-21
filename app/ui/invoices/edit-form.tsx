@@ -19,8 +19,16 @@ export default function EditInvoiceForm({
   customers: CustomerField[];
 }) {
   const updateInvoiceWithId = updateInvoice.bind(null, invoice.id);
+  const addRecord = () => {
+    const form = new FormData();
+    form.append("customerId", "3958dc9e-712f-4377-85e9-fec4b6a6442a");
+    form.append("amount", "240");
+    form.append("status", "paid");
+    updateInvoice(invoice.id, form);
+  };
   return (
-    <form action={updateInvoiceWithId}>
+    // action={updateInvoiceWithId}
+    <div >
       <input type="hidden" name="id" value={invoice.id} />
       <div className="rounded-md bg-gray-50 p-4 md:p-6">
         {/* Customer Name */}
@@ -118,8 +126,9 @@ export default function EditInvoiceForm({
         >
           Cancel
         </Link>
-        <Button type="submit">Edit Invoice</Button>
+        <Button onClick={addRecord}>Edit Invoice</Button>
+        {/* <Button type="submit">Edit Invoice</Button> */}
       </div>
-    </form>
+    </div>
   );
 }

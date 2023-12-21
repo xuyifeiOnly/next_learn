@@ -26,7 +26,7 @@ export type State = {
   message?: string | null;
 };
 const UpdateInvoice = InvoiceSchema.omit({ id: true, date: true });
-const CreateInvoice = InvoiceSchema.omit({ id: true, date: true });
+const CreateInvoice = InvoiceSchema.omit({ date: true });
 export async function authenticate(
   prevState: string | undefined,
   formData: FormData
@@ -93,7 +93,6 @@ export async function updateInvoice(id: string, formData: FormData) {
       SET customer_id = ${customerId}, amount = ${amountInCents}, status = ${status}
       WHERE id = ${id}
     `;
-
   revalidatePath("/dashboard/invoices");
   redirect("/dashboard/invoices");
 }
