@@ -1,8 +1,11 @@
 https://nextjs.org/learn/dashboard-app/css-styling
 
-## 数据库存储
+## 数据库存储 mysql
 
 https://vercel.com/xuyifei-youdinet/next-learn/stores/postgres/store_62fxNBpcFCgdwA4V/data
+
+## 文件存储  通过blob
+
 
 ## 模板使用
 
