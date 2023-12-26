@@ -15,8 +15,10 @@ export const authConfig = {
         return false; // Redirect unauthenticated users to login page
       } else if (isLoggedIn) {
         // console.log(nextUrl.href);
-
-        return Response.redirect(new URL("/dashboard", nextUrl));
+        if(nextUrl.pathname.startsWith('/ant')){
+          return true
+        }
+        // return Response.redirect(new URL("/dashboard", nextUrl));
       }
       return true;
     },

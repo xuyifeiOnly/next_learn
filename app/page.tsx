@@ -8,6 +8,7 @@ import Image from "next/image";
 import { delFile, deleteText, saveImg, saveText } from "./lib/blobUtil";
 import { use, useRef, useState } from "react";
 import { PutBlobResult } from "@vercel/blob";
+import { bufferToBase64 } from "@/lib/action";
 export default function Page() {
   const uploadText = () => {
     saveText();
@@ -17,7 +18,7 @@ export default function Page() {
   const delText = () => {
     // deleteText()
     // saveImg();
-    delFile()
+    delFile();
   };
   const uploadImg = async () => {
     const file = inputFileRef.current!.files![0];
@@ -28,12 +29,22 @@ export default function Page() {
     });
 
     const newBlob = (await response.json()) as PutBlobResult;
+
+    // const reader = new FileReader();
+    // reader.onload = async function (event) {
+    //   // 将文件内容转换为二进制数据
+    //   const binaryData = event.target!.result;
+    //   // const result = await bufferToBase64(binaryData as ArrayBuffer);
+    //   // console.log(result);
+    // };
+    // reader.readAsArrayBuffer(file);
     //  saveImg(file)
     console.log(newBlob);
   };
   return (
     <main className="flex min-h-screen flex-col p-6">
-      <button
+      hi
+      {/* <button
         onClick={uploadText}
         className="flex items-center gap-5 self-start rounded-lg bg-blue-500 px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-blue-400 md:text-base"
       >
@@ -59,7 +70,7 @@ export default function Page() {
         width={200}
         height={200}
         src="https://x7tjz5xqqekyn9vr.public.blob.vercel-storage.com/logo-6onSKVLaZtYzfxVlQh2nJp6Y633VzO.png"
-      ></Image>
+      ></Image> */}
     </main>
   );
 }
