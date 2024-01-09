@@ -3,12 +3,14 @@ import { inter } from "@/app/ui/fonts";
 import Link from "next/link";
 import AppContextProvider from "./_store";
 import { sleep } from "../lib/utils";
+import { globalConfig } from "./_store/global";
 export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  const re = await sleep();
+  const re = await sleep(0,new Date().getTime().toString());
+  globalConfig.colums = re as string;
   return (
     <html lang="en">
       <body className={`${inter.className} antialiased overflow-hidden`}>

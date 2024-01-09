@@ -1,12 +1,14 @@
-"use client";
 
+import { sleep } from "@/app/lib/utils";
 import { useAppContext } from "../_store";
+import { globalConfig } from "../_store/global";
 
-const ReSecond = () => {
+const ReSecond =async () => {
   // const { theme, setTheme } = useThemeContext();
-
+  const re = await sleep(3000,new Date().getTime().toString());
   return (
     <div className="text-blue text-blue-800">
+      {globalConfig.colums}
       redux的第一个页面
       <div>
         {/* {theme}

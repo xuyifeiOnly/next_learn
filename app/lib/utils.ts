@@ -7,10 +7,10 @@ export const formatCurrency = (amount: number) => {
   });
 };
 
-export const sleep = (timer = 2000) => {
+export const sleep = (timer = 2000,val='ahode') => {
   return new Promise((resolve) => {
     setTimeout(() => {
-      resolve('测试');
+      resolve(val);
     }, timer);
   });
 };
