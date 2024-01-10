@@ -4,6 +4,7 @@ import Link from "next/link";
 import AppContextProvider from "./_store";
 import { sleep } from "../lib/utils";
 import { globalConfig } from "./_store/global";
+import { stateValtio } from "./_store/valtio";
 export default async function RootLayout({
   children,
 }: {
@@ -11,11 +12,13 @@ export default async function RootLayout({
 }) {
   const re = await sleep(0,new Date().getTime().toString());
   globalConfig.colums = re as string;
+  stateValtio.count++
   return (
     <html lang="en">
       <body className={`${inter.className} antialiased overflow-hidden`}>
-        <Link href="/re_second">第一个</Link>
-        <Link href="/re_third">第二个</Link>
+        <Link href="/re_second">第二个</Link>
+        <Link href="/re_third">第三个</Link>
+        <Link href="/re_four">第四个</Link>
         <AppContextProvider
           init={{
             currentModel: re as string,
