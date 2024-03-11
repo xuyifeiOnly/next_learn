@@ -16,9 +16,9 @@ export default async function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.className} antialiased overflow-hidden`}>
-        <Link href="/re_second">第二个</Link>
-        <Link href="/re_third">第三个</Link>
-        <Link href="/re_four">第四个</Link>
+        <Link href="/redux_page/re_second">第二个</Link>
+        <Link href="/redux_page/re_third">第三个</Link>
+        <Link href="/redux_page/re_four">第四个</Link>
         <AppContextProvider
           init={{
             currentModel: re as string,
