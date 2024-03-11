@@ -6,7 +6,10 @@ const config: Config = {
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
-  mode: "jit",
+  // mode: "jit",
+  corePlugins: {
+    preflight: false, // 添加这一行
+  },
   theme: {
     extend: {
       customStyles: {

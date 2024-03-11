@@ -19,3 +19,7 @@ https://blog.csdn.net/halo1416/article/details/131162456
 "other": true,
 "comments": true,
 },
+
+
+## 引入mdx插件
+https://juejin.cn/post/7308894877462626354?searchId=2024031117453308D68FCC46D3BFCD56E1
